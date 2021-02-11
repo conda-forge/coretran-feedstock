@@ -1,5 +1,5 @@
 {% set name = "coretran" %}
-{% set version = "1.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/leonfoks/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 7e39d0115020ea5b986ce900319c30649e94d0698dc6f760d5622a51d348ec04
+  sha256: abcf5f934158c33295f3c3eae21e0d2de53d341a89d8cc78a16ebc86359f685d
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
