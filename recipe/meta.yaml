@@ -1,5 +1,5 @@
 {% set name = "coretran" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/leonfoks/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: abcf5f934158c33295f3c3eae21e0d2de53d341a89d8cc78a16ebc86359f685d
+  sha256: 084b02ec6883c19d734228d971a20f1350634560b71517b3f745fb2f29e6068c
 
 build:
   number: 0
@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - {{ compiler('fortran') }}
+    - {{ stdlib("c") }}
     - cmake
     - make  # [unix]
 
